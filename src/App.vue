@@ -3,8 +3,8 @@
     <Navbar />
     <router-view />
   </div>
-  <img id="logo" alt="logo" src="./assets/logo-cooka.png">
-  <MestreCooka msg="Bem-vindo(a), Mestre Cooka!"/>
+
+  <MestreCooka/>
 </template>
 
 <script>
@@ -32,10 +32,6 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #130c00;
-  margin-top: 60px;
-}
-
-#logo{
-  width: 22rem
+  margin-top: 40px;
 }
 </style>

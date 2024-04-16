@@ -1,10 +1,11 @@
-<!-- Navbar.vue -->
-
 <template>
     <nav class="navbar">
       <div class="container">
         <div class="logo">
             <img class="cebola" alt="logo" src="../assets/logo-cebola.png">
+        </div>
+        <div>
+          <input v-model="search" placeholder="Procurar" class="search-bar"/>
         </div>
         <ul class="nav-links">
           <li><a href="#">Sobre</a></li>
@@ -21,7 +22,14 @@
   </script>
   
   <style>
-  /* Estilos para a barra de navegação */
+  .search-bar{
+    border: 2px solid #130c00;
+    border-radius: 10px;
+    padding: 8px;
+    margin-left: 25%;
+    font-size: 14px;
+    font-weight: bold;
+  }
   .navbar {
     background-color: #130c00;
     color: #fff;
@@ -61,10 +69,10 @@
   .cebola{
     width: 40px;
     margin-left: 5rem;
-    transition: all .3s;
+    transition: transform 0.3s ease; 
   }
   .cebola:hover{
-    width: 45px;
+    transform: scale(1.2);
   }
   </style>
   
