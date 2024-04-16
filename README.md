@@ -6,7 +6,7 @@ O projeto Mestre Cooka é um sistema web para buscar receitas culinárias, foi d
 
 ## Descrição
 O Mestre Cooka tem como objetivo auxiliar o usuário na pesquisa por receitas culinárias, podendo realizar as buscas de diversas formas, como nome da receita, país de origem, ingrediente principal e até mesmo uma receita aleatória.
-Para alcançar esse objetivo, o projeto utiliza a tecnologia VueJS e a integraçaõ da API MealDB.
+Para alcançar esse objetivo, o projeto utiliza a tecnologia VueJS e a integração da API MealDB.
 
 ## Funcionalidades
 Buscar receitas por:
