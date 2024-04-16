@@ -16,7 +16,7 @@
     <hr class="divider" />
     <div class="receitas-container" v-if="receitas.length > 0">
       <div class="receita" v-for="receita in receitas" :key="receita.idMeal">
-        <img :src="receita.strMealThumb" :alt="receita.strMeal" width="150" />
+        <img :src="receita.strMealThumb" :alt="receita.strMeal"/>
         <p>{{ receita.strMeal }}</p>
       </div>
     </div>
