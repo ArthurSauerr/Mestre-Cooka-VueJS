@@ -6,8 +6,8 @@
           <img class="cebola" alt="logo" src="./assets/logo-cebola.png" />
         </router-link>
       </div>
-      <form @submit.prevent="submitSearch">
-        <input v-model="search" placeholder="Procurar" class="search-bar" />
+      <form @submit.prevent="submitSearch()">
+        <input @submit="submitSearch()" v-model="search" placeholder="Procurar" class="search-bar" />
       </form>
       <ul class="nav-links">
         <router-link to="/">
@@ -21,6 +21,35 @@
   </nav>
   <router-view />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      search: '',
+      receitas: []
+    }
+  },
+  methods: {
+    async submitSearch() {
+      try {
+        const response = await fetch (
+          `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.search}`
+        );
+        if(response.ok){
+          const data = await response.json();
+          this.receitas = data.meals;
+          this.$router.push({ name: 'recipe-details', params: { searchTerm: this.search} });
+        } else {
+          throw new Error(`Erro ao buscar receita: ${response.status}`);
+        }
+      } catch(error) {
+        console.log("Erro ao buscar receita: ", error)
+      }
+    }
+  }
+}
+</script>
 
 <style>
 body {
